@@ -44,6 +44,7 @@ h3 {
 p {
   margin: 1rem 0;
 }
+
 a {
   font-size: 1.6rem;
   color: var(--dark);
@@ -65,6 +66,11 @@ hr {
 
 ::placeholder {
   color: var(--dark);
+}
+
+.article-author {
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 
 /***** UTILITY *****/
@@ -120,19 +126,16 @@ hr {
   background: white;
   color: var(--dark);
 }
+
 .mx-1 {
   margin-left: 1rem;
   margin-right: 1rem;
 }
+
 .underline {
   padding-bottom: 15px;
   border-bottom: 1px solid var(--gray);
   margin-bottom: 2rem;
-}
-/***** GENERIC *****/
-.article-author {
-  font-weight: 700;
-  font-size: 1.4rem;
 }
 
 /***** HEADER *****/
@@ -236,9 +239,11 @@ nav {
     "img . form ."
     "img . . .";
 }
+
 .ads img {
   grid-area: img;
 }
+
 .ads h1 {
   grid-area: h1;
   font-size: 3rem;
@@ -265,6 +270,7 @@ nav {
 .content {
   margin: 3rem 0;
   display: flex;
+  align-items: start;
 }
 
 .articles {
@@ -280,6 +286,12 @@ nav {
     "content img"
     "author img"
     "details img";
+  margin-bottom: 2rem;
+}
+
+.articles article h3,
+.articles article p {
+  margin: 0.2rem 0;
 }
 
 .articles article img {
@@ -301,6 +313,27 @@ nav {
 .articles article .text-hint {
   grid-area: details;
 }
+
 .popular {
   flex: 350px;
+  padding: 0 3rem;
+  position: sticky;
+  top: 45px;
+}
+
+.popular ul li {
+  display: grid;
+  grid-template-columns: 50px auto;
+  place-items: center center;
+  margin-bottom: 1rem;
+}
+
+.popular ul li div:first-child {
+  font-size: 3rem;
+  color: var(--gray-hint);
+}
+
+.popular ul li p,
+.popular ul li h3 {
+  margin: 0.2rem;
 }
